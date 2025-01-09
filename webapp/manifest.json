@@ -1,0 +1,136 @@
+{
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "sap.prac.flexiblecolumnlayout",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.16.1",
+            "toolsId": "56157386-0379-453e-818f-4084a43ed398"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.131.1",
+            "libs": {
+                "sap.f" : {},
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.uxap":{}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sap.prac.flexiblecolumnlayout.i18n.i18n"
+                }
+            },
+            "": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri" : "model/data.json"
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "transition": "slide",
+                "type": "View",
+                "viewType": "XML",
+                "path": "sap.prac.flexiblecolumnlayout.view",
+                "async": true,
+                "viewPath": "sap.prac.flexiblecolumnlayout.view"
+            },
+            "routes": [
+                {
+                    "name": "RouteflexibleColumnLayout",
+                    "pattern": "flexibleColumnLayout",
+                    "target": [
+                        "TargetflexibleColumnLayout"
+                    ]
+                },
+                {
+                    "name": "ListView",
+                    "pattern": "ListView",
+                    "target": [
+                        "ListView"
+                    ]
+                },
+                {
+                    "name" : "detail",
+                    "pattern": "detail",
+                    "target" :[
+                        "detail"
+                    ]
+                }
+            ],
+            "targets": {
+                "TargetflexibleColumnLayout": {
+                    "id": "flexibleColumnLayout",
+                    "name": "flexibleColumnLayout",
+                    "transition" :"slide",
+                    "viewLevel" : 1,
+                    "viewType": "XML"
+                },
+                
+                "ListView": {
+                    "id": "ListView",
+                    "name": "ListView",
+                    "transition":"slide",
+                    "viewType": "XML",
+                    "viewLevel" : 2
+                },
+                "detail":{
+                    "id":"detail",
+                    "name" : "detail",
+                    "transition" :"slide",
+                    "viewType": "XML",
+                    "viewLevel" : 3
+                }
+            
+            }
+        },
+        "rootView": {
+            "viewName": "sap.prac.flexiblecolumnlayout.view.App",
+            "type": "XML",
+            "id": "app"
+        }
+    }
+}

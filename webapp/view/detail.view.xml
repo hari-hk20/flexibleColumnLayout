@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" controllerName="sap.prac.flexiblecolumnlayout.controller.detail">
+    <m:Page id="page3" title="End Page" showNavButton="true" navButtonPress="onPressBack">
+        <m:Text id="_IDGenText" text ="End View Page"/>
+        <m:Button id="b1" text="click" press="onClick"/>
+    </m:Page>
+</mvc:View>

@@ -1,0 +1,9 @@
+<mvc:View xmlns:uxap="sap.uxap" controllerName="sap.prac.flexiblecolumnlayout.controller.ListView"
+xmlns="sap.m"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:form="sap.ui.layout.form">
+    <Page id="page2" navButtonPress="onPressBack" showNavButton="true">
+        <Text id="text1" text="Mid column Page-->"/>
+        <Link id="link1" text="click here" press="onClick"/>
+    </Page>
+</mvc:View>

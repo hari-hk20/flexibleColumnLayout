@@ -1,0 +1,18 @@
+<mvc:View xmlns:f="sap.f" controllerName="sap.prac.flexiblecolumnlayout.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <App id="app">
+        <f:FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
+		    <f:beginColumnPages>
+			    <mvc:XMLView id="beginView" viewName="sap.prac.flexiblecolumnlayout.view.flexibleColumnLayout"/>
+		    </f:beginColumnPages>
+            <f:midColumnPages>
+                <mvc:XMLView id="midView" viewName="sap.prac.flexiblecolumnlayout.view.ListView"/>
+            </f:midColumnPages>
+            <f:endColumnPages>
+                <mvc:XMLView id="endView" viewName="sap.prac.flexiblecolumnlayout.view.detail"/>
+            </f:endColumnPages>
+	    </f:FlexibleColumnLayout>
+    </App>
+</mvc:View>
